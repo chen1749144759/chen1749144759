@@ -1,0 +1,1455 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="My awesome title, Is My Blog">
+    <meta name="description" content="
+== 因不同markdown编辑器之间的格式存在差异,最好使用Typora打开 ==
+
+
+
+11.1  链式操作思想
+链式操作是指对一个对象中的函数进行操作后反悔的结果是这个对象,以便后续可以继续调用该对象的其他方法, 例如:
+
+//定义">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>My awesome title | Is My Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Is My Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Is My Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">My awesome title</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JQuery/">
+                                <span class="chip bg-color">JQuery</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%BF%AB%E9%80%9F%E6%93%8D%E4%BD%9CDOM/">
+                                <span class="chip bg-color">快速操作DOM</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JQuery/" class="post-category">
+                                JQuery
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-07-14
+                </div>
+                
+
+                
+
+                
+
+                
+				
+                
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>== 因不同markdown编辑器之间的格式存在差异,最好使用Typora打开 ==</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h3 id="1-1-链式操作思想"><a href="#1-1-链式操作思想" class="headerlink" title="1.1  链式操作思想"></a>1.1  链式操作思想</h3><ul>
+<li>链式操作是指对一个对象中的函数进行操作后反悔的结果是这个对象,以便后续可以继续调用该对象的其他方法, 例如:</li>
+</ul>
+<pre><code class="javascript">//定义一个JS类 
+function Demo() { 
+} 
+//扩展它的元素 
+Demo.prototype ={ 
+setName:function (name) { 
+this.name = name; 
+return this;  //返回该对象
+}, 
+getName:function () { 
+return this.name; 
+}, 
+setAge:function (age) { 
+this.age = age; 
+return this;  //返回该对象
+} 
+}; 
+////工厂函数 
+function D() { 
+return new Demo(); 
+} 
+//去实现可链式的调用 
+D().setName(&quot;CJ&quot;).setAge(18).setName(); </code></pre>
+<h3 id="1-2-function-与-window-onload-的区别"><a href="#1-2-function-与-window-onload-的区别" class="headerlink" title="1.2 $(function..) 与 window.onload()的区别"></a>1.2 $(function..) 与 window.onload()的区别</h3><ul>
+<li>前者在网页中DOM节点加载完毕就会执行,并可以执行多次</li>
+<li>后者会在网页完全加载完毕执行,并只会执行最后一个函数[^注解1.2]</li>
+</ul>
+<pre><code class="javascript">//两者区别
+//前者 
+$(function(){
+    alert(1);
+});
+$(function(){
+    alert(2);
+});
+//两次都会执行 
+
+//后者
+window.onload = function(){
+    alert(1);
+}
+
+window.onload = function(){
+    alert(2);
+}
+//只会执行最后一次 结果 2</code></pre>
+<h3 id="1-3-DOM对象和-jQuery对象的区别"><a href="#1-3-DOM对象和-jQuery对象的区别" class="headerlink" title="1.3 DOM对象和 jQuery对象的区别"></a>1.3 DOM对象和 jQuery对象的区别</h3><ul>
+<li><p>同样一段代码 两种不同的获取方式 例:</p>
+<pre><code class="html">&lt;input id=&quot;name&quot; type=&quot;text&quot; /&gt;
+&lt;script&gt;
+    //DOM 
+    var name = document.getElementById(&quot;name&quot;).value;
+    //jQuery
+    var $name = $(&quot;#name&quot;).val();
+
+    //比起DOM对象复杂难记的函数方法,你只需记住jQuery中的 &quot;#&quot; &quot;.&quot; 等等
+    //实际工作中也常常只用到 Id选择器和 类选择器  详细选择器类型下面会有记录
+&lt;/script&gt;</code></pre>
+</li>
+</ul>
+<h3 id="1-4-选择器"><a href="#1-4-选择器" class="headerlink" title="1.4  选择器"></a>1.4  选择器</h3><h5 id="注意特殊字符的转义"><a href="#注意特殊字符的转义" class="headerlink" title="注意特殊字符的转义"></a>注意特殊字符的转义</h5><p>例如:</p>
+<pre><code class="html">//如果标签中有 &quot; # [] ()  则需要加入&#39;\\&#39;进行转义,如下: &quot;
+&lt;input id=&quot;name[1]&quot; type=&quot;text&quot; /&gt;
+&lt;script&gt;
+    $(&quot;#name\\[1\\]&quot;).css(...);
+&lt;/script&gt;</code></pre>
+<ul>
+<li>jQuery一共给我们提供了9种选择器 他们分别是:</li>
+</ul>
+<h4 id="1-4-1-基本选择器"><a href="#1-4-1-基本选择器" class="headerlink" title="1.4.1. 基本选择器"></a>1.4.1. 基本选择器</h4><pre><code class="javascript">$(&quot;#id&quot;) //id选择器 返回单个元素
+$(&quot;.class&quot;) //类选择器 返回集合元素
+$(&quot;element&quot;) //element翻译过来就是元素/标签  返回所有符合的标签
+$(&quot;*&quot;) //匹配所有元素 
+$(&quot;div,span,p.myClass&quot;) //返回所有 div,span以及p标签中class为MyClass的标签</code></pre>
+<h4 id="1-4-2-层次选择器"><a href="#1-4-2-层次选择器" class="headerlink" title="1.4.2. 层次选择器"></a>1.4.2. 层次选择器</h4><p> [^注解1.4.1] [^注解1.4.2]</p>
+<pre><code class="javascript">$(&quot;div sapn&quot;) //选取div标签下所有span元素 不论层次 参见 注解1.4.1
+$(&quot;div &gt; sapn&quot;) //只会选择父标签是div的span标签 
+$(&quot;div + span&quot;) //选取紧跟在div标签后的span元素 参见 注解 1.4.2 
+$(&quot;div ~ span&quot;) //选取div后面的所有span兄弟元素 
+//jQuery API 中也提供一些类似功能的函数 .next()  .nextAll()</code></pre>
+<h4 id="1-4-3-过滤选择器"><a href="#1-4-3-过滤选择器" class="headerlink" title="1.4.3. 过滤选择器"></a>1.4.3. 过滤选择器</h4><pre><code class="javascript">$(&quot;div:first&quot;) //选取第一个div元素
+$(&quot;div:last&quot;) //选取最后一个div元素
+$(&quot;div:not(.class)&quot;) //选取所有类名不是 class的div标签
+$(&quot;div &gt; li:eq(1)&quot;) //选取div元素下第二个li元素 
+$(&quot;div:even&quot;) // 选取偶数的div元素  index从0开始
+$(&quot;div:odd&quot;) //选取奇数的div元素 index从0开始
+$(&quot;div:lt(index)&quot;) // 选取索引小于index的元素
+$(&quot;:header&quot;) //选取网页中所有的标题元素 h1 h2 ...
+$(&quot;div:animated&quot;) // 选取当前正在执行动画的元素
+$(&quot;:focus&quot;) //选取当前获得焦点的元素 </code></pre>
+<h4 id="1-4-4-内容过滤选择器"><a href="#1-4-4-内容过滤选择器" class="headerlink" title="1.4.4. 内容过滤选择器"></a>1.4.4. 内容过滤选择器</h4><pre><code class="javascript">$(&quot;div:contains(&#39;我&#39;)&quot;) // 选取内容含有 &#39;我&#39; 的div元素
+$(&quot;div:empty&quot;) // 选取没有子元素或内容的 &#39;空标签&#39;  反而子标签和内容文本只要包含一个就不会被选中
+$(&quot;div:parent&quot;) // 选取含有子元素或者内容的标签  与选取没有的相反
+$(&quot;div:has(span)&quot;) //选择含有span标签的div标签 无视层级关系  </code></pre>
+<h4 id="1-4-5-可见性过滤选择器"><a href="#1-4-5-可见性过滤选择器" class="headerlink" title="1.4.5. 可见性过滤选择器"></a>1.4.5. 可见性过滤选择器</h4><pre><code class="javascript">$(&quot;:hidden&quot;) //选取所有不可见元素
+$(&quot;:visible&quot;) //选取所有可见元素 </code></pre>
+<h4 id="1-4-6-属性过滤选择器"><a href="#1-4-6-属性过滤选择器" class="headerlink" title="1.4.6. 属性过滤选择器"></a>1.4.6. 属性过滤选择器</h4><p> [^注解1.4.3]</p>
+<pre><code class="javascript">$(&quot;div[class]&quot;) // 选择拥有属性 class 的div元素
+$(&quot;div[class=myClass]&quot;) //选择class名为myClass 的div元素
+$(&quot;div[class!=myClass]&quot;) // 选择class不等于myClass的div元素
+$(&quot;div[class^=my]&quot;) // 选择class名称以 my开头的div元素 
+$(&quot;div[class$=Class]&quot;) //选择class名称以 Class结尾的div元素
+$(&quot;div[class*=yCl]&quot;) //选择class名称中有&quot;yCl&quot;字符 的div元素
+$(&quot;div[class|=my]&quot;) // 选择class名称等于 my 或者以my开头后面跟一个连字符的div元素 参见 注解1.4.3
+$(&quot;div[class~=class]&quot;) //选择用空格分隔的值中包含class 的div元素
+//下面这个选择器为上述选择器组合 代码只组合两个为示例
+$(&quot;div[title][class*=yCl]&quot;) // 这行代码表示: 选择有title属性并且class中含有字符&#39;yCl&#39;的div标签</code></pre>
+<h4 id="1-4-7-子元素过滤选择器"><a href="#1-4-7-子元素过滤选择器" class="headerlink" title="1.4.7 子元素过滤选择器"></a>1.4.7 子元素过滤选择器</h4><ul>
+<li>对比子元素选择器之前的一些选择器,html中的DOM结构会有一些不同;</li>
+<li>下面我将html网页中的结构输出如下,方便理解:</li>
+</ul>
+<pre><code class="html">&lt;body&gt;
+    &lt;ul&gt;1
+        &lt;li&gt;1.1&lt;/li&gt;
+        &lt;li&gt;1.2&lt;/li&gt;
+        &lt;li&gt;1.3&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul&gt;2
+        &lt;li&gt;2.1&lt;/li&gt;
+        &lt;li&gt;2.2&lt;/li&gt;
+        &lt;li&gt;2.3&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul&gt;3
+        &lt;li&gt;3.1&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;</code></pre>
+<ul>
+<li>对照上图结构理解选择器  </li>
+</ul>
+<p>–多种写法,不多演示–</p>
+<pre><code class="javascript">$(&quot;body ul:nth-child(2n)&quot;) // 选取父元素body 下索引是2或者2的倍数的 ul元素(&quot;n&quot;代表本身及其倍数 , nth-child 的index从1开始)
+$(&quot;ul &gt; li:first-child&quot;) // 选取父元素是ul 的 第一个li元素
+$(&quot;ul &gt; li:last-child&quot;) // 选取父元素是ul 的 最后一个li元素
+$(&quot;ul li:only-child&quot;) // 选取父元素是 ul 且只有一个子元素并且还是li元素 的子元素</code></pre>
+<h4 id="1-4-8-表单对象属性过滤选择器"><a href="#1-4-8-表单对象属性过滤选择器" class="headerlink" title="1.4.8 表单对象属性过滤选择器"></a>1.4.8 表单对象属性过滤选择器</h4><ul>
+<li><p>对比其他选择器,表单对象属性过滤选择器会在一个相对稳定的结构中对文本进行操作</p>
+</li>
+<li><p>将带有from的表单输出如下:</p>
+</li>
+</ul>
+<pre><code class="html">&lt;body&gt;
+&lt;form id=&quot;form1&quot; action=&quot;#&quot;&gt;
+    &lt;input disabled=&quot;disabled&quot;&gt;
+    &lt;input &gt;
+
+    &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; value=&quot;checkbox1&quot;&gt;checkbox1
+    &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; value=&quot;checkbox2&quot;&gt;checkbox2
+    &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; value=&quot;checkbox3&quot;&gt;checkbox3
+
+    &lt;select name=&quot;select&quot;&gt;
+        &lt;option&gt;1&lt;/option&gt;
+        &lt;option&gt;2&lt;/option&gt;
+        &lt;option&gt;3&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+&lt;/body&gt;</code></pre>
+<ul>
+<li>对照上图理解选择器</li>
+</ul>
+<pre><code class="javascript">//注意: 只要标签内值可以发生改变就会被认为是可选因素 例如: select元素
+$(&quot;#form1 :enabled&quot;) //选取id为from1的表单内所有可用元素 (注意 &quot;:&quot; 前面有一个空格,否则不识别)
+//注意: 只有标签内有disabled属性时,该标签才会被选中 
+$(&quot;#form1 :disabled&quot;) //选取id为form1的表单内所有不可用元素 (注意 &quot;:&quot; 前面有一个空格,否则不识别)
+//以下一下两种选择方式需要定义click事件 
+$(&quot;input:checked&quot;) // 选取input被选中的元素(特指:单选框,多选框) (注意 &quot;:&quot; 前后没有空格,否则不识别)
+$(&quot;select option:selected&quot;) //选取被选中的option标签</code></pre>
+<h4 id="1-4-9-表单对象属性选择器"><a href="#1-4-9-表单对象属性选择器" class="headerlink" title="1.4.9 表单对象属性选择器"></a>1.4.9 表单对象属性选择器</h4><ul>
+<li>专门为表单而生的选择器</li>
+<li>注意:  “ : “ 冒号前有空格</li>
+</ul>
+<pre><code class="javascript">$(&quot;#form1 :input&quot;) //选取所有的 input textarea select 和 button 元素
+$(&quot;#form1 :text&quot;) //选取 所有的属性为text的input标签
+$(&quot;#form1 :password&quot;) //选取所有的密码框
+$(&quot;#form1 :radio&quot;) //选取所有的单选框
+$(&quot;#form1 :checkbox&quot;) //选取所有的复选框
+$(&quot;#form1 :submit&quot;) // 选取所有的提交按钮
+$(&quot;#form1 :image&quot;) //选取所有图片的按钮
+$(&quot;#form1 :reset&quot;) //选取所有重置按钮
+$(&quot;#form1 :button&quot;) //选取所有按钮
+$(&quot;#form1 :file&quot;) //选取所有的上传域</code></pre>
+<ul>
+<li>下图演示如何异步获取用户选择的图片路径</li>
+</ul>
+<pre><code class="html">&lt;body&gt;
+&lt;form id=&quot;form1&quot; action=&quot;#&quot;&gt;
+    &lt;input type=&quot;file&quot; value=&quot;file&quot;&gt;
+    &lt;input type=&quot;file&quot; value=&quot;code&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    //只有在 input元素的属性 value值是以co开头 并且 其父节点是form元素 而且属性id值中有字符1才会触发change事件
+    $(&quot;form[id*=1] &gt; input[value^=co]&quot;).change(function () {
+        var file = $(&quot;#form1 input[value^=co]&quot;).val();
+        console.log(file);
+    })
+&lt;/script&gt;</code></pre>
+<h3 id="1-5-jQuery中的DOM操作"><a href="#1-5-jQuery中的DOM操作" class="headerlink" title="1.5 jQuery中的DOM操作"></a>1.5 jQuery中的DOM操作</h3><h4 id="1-5-1-添加节点"><a href="#1-5-1-添加节点" class="headerlink" title="1.5.1 添加节点"></a>1.5.1 添加节点</h4><pre><code class="javascript">$(&quot;div&quot;).append(&quot;&lt;p&gt;&lt;/p&gt;&quot;); // 在div标签内部末尾插入一对p标签
+$(&quot;div&quot;).prepend(&quot;&lt;p&gt;&lt;/p&gt;&quot;); // 在div标签内部开头插入一对p标签
+$(&quot;div&quot;).appendTo(&quot;&lt;p&gt;&lt;/p&gt;&quot;); // 将div标签插入到p标签末尾中
+$(&quot;div&quot;).prependTo(&quot;&lt;p&gt;&lt;/p&gt;&quot;); // 将div标签插入到p标签开头中
+$(&quot;div&quot;).after(&quot;&lt;p&gt;&lt;/p&gt;&quot;); // 在div标签后面插入p标签
+$(&quot;div&quot;).insertAfter(&quot;&lt;p&gt;&lt;/p&gt;&quot;); // 在div标签前面插入p标签
+$(&quot;div&quot;).before(&quot;&lt;p&gt;&lt;/p&gt;&quot;); // 在div标签前面插入p标签
+$(&quot;div&quot;).insertefore(&quot;&lt;p&gt;&lt;/p&gt;&quot;); // 在p标签前面插入div标签</code></pre>
+<h4 id="1-5-2-删除节点"><a href="#1-5-2-删除节点" class="headerlink" title="1.5.2 删除节点"></a>1.5.2 删除节点</h4><pre><code class="javascript">$(&quot;div&quot;).remove(); //将div节点从网页上删除
+$(&quot;div&quot;).detach(); //该方法并不会吧div节点的绑定事件与追加数据删除,并可以再次追加回来
+$(&quot;div&quot;).empty(); //清空节点</code></pre>
+<h4 id="1-5-3-复制节点"><a href="#1-5-3-复制节点" class="headerlink" title="1.5.3 复制节点"></a>1.5.3 复制节点</h4><pre><code class="javascript">$(this).clone(true); //一般常用this表示当前对象,true则是表示连同元素所绑定的事件一起复制</code></pre>
+<h4 id="1-5-4-替换节点"><a href="#1-5-4-替换节点" class="headerlink" title="1.5.4 替换节点"></a>1.5.4 替换节点</h4><pre><code class="javascript">$(&quot;p[name*=&#39;my&#39;]&quot;).replaceWith(&quot;&lt;span&gt;&lt;/sapn&gt;&quot;); //替换掉name中有my的p标签为span
+$(&quot;&lt;span&gt;&lt;/span&gt;&quot;).replaceAll(&quot;p&quot;); // 替换掉所有p标签为span</code></pre>
+<h4 id="1-5-5-包裹节点"><a href="#1-5-5-包裹节点" class="headerlink" title="1.5.5 包裹节点"></a>1.5.5 包裹节点</h4><pre><code class="javascript">$(&quot;ul &gt; li[class*=&#39;my&#39;]:eq(2)&quot;).wrap(&quot;&lt;b&gt;&lt;/b&gt;&quot;); // 将匹配的标签包裹在b标签中
+$(&quot;ul span[class|=my]&quot;).wrapAll(&quot;&lt;b&gt;&lt;/b&gt;&quot;); // 将匹配的所有元素用一个b标签包裹起来 如果元素并不在一起,wrapAll()方法会自动将匹配到的元素聚集到一起,位置则在第一个匹配标签的位置
+$(&quot;ul li:eq(0)&quot;).wrapInner(&quot;&lt;b&gt;&lt;/b&gt;&quot;); // 讲匹配到的元素的子元素(包含文本内容)包裹起来</code></pre>
+<h4 id="1-5-6-属性操作"><a href="#1-5-6-属性操作" class="headerlink" title="1.5.6 属性操作"></a>1.5.6 属性操作</h4><pre><code></code></pre><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><pre><code>$(&quot;input&quot;).keyup(function () {
+// 在用户按下一个键盘按键时发生 (无视焦点失去)
+    });</code></pre><p>一.相关知识准备:<br>1.onchange事件:<br>此事件会在元素内容发生改变，且失去焦点的时候触发。<br>浏览器支持度较好。<br>2.onpropertychange事件:<br>此事件会在元素内容发生改变时立即触发，即便是通过js改变的内容也会触发此事件。<br>元素的任何属性改变都会触发该事件，不止是value。<br>只有IE11以下浏览器支持此事件。<br>3.oninput事件:<br>此事件会在value属性值发生改变时触发，通过js改变value属性值不会触发此事件。<br>只有IE8以上或者谷歌火狐等标准浏览器支持。</p>
+<html>
+<head><link href="/static/css/cms/register.css" rel="stylesheet">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>cms - 主页</title>
+    <link href="/static/css/cms/cms_public.css" rel="stylesheet">
+<link rel="stylesheet" href="http://127.0.0.1:20001/static/js/plugins/layer/skin/layer.css" id="layui_layer_skinlayercss" style=""></head>
+
+<body class="con-body  pace-done" style="overflow:hidden"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+​    <div class="pace-progress-inner"></div>
+</div>
+
+<div class="pace-activity"></div></div>
+    <div id="wrapper">
+
+<pre><code>    &lt;!--右侧部分开始--&gt;
+    &lt;div class=&quot;center&quot;&gt;
+        &lt;div class=&quot;banner&quot;&gt;
+            &lt;div class=&quot;logoDiv&quot;&gt;
+                &lt;div class=&quot;logo&quot;&gt;
+                    &lt;img src=&quot;/static/img/cms/main/head_logo.png&quot; id=&quot;head_log&quot; class=&quot;ewb-head-log&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;sysName&quot;&gt;
+                    &lt;div class=&quot;sysMainName&quot;&gt;厦门市工程建设项目审批管理系统网上办事大厅&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!--菜单--&gt;
+        &lt;div id=&quot;navbar_ctl00_navContent&quot; class=&quot;menu&quot;&gt;
+            &lt;div class=&quot;containerl&quot;&gt;
+                &lt;ul class=&quot;nav-list clearfix&quot;&gt;
+                    &lt;li class=&quot;navitem&quot; id=&quot;cms_main&quot;&gt;
+                        &lt;a href=&quot;javascript:void(0);&quot; onclick=&quot;indexMethod(&#39;cms_main&#39;)&quot;&gt;首页&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;navitem&quot; id=&quot;cms_guidance&quot;&gt;
+                        &lt;a href=&quot;javascript:void(0);&quot; onclick=&quot;indexMethod(&#39;cms_guidance&#39;)&quot;&gt;办事指南&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;navitem&quot; id=&quot;online_deal&quot;&gt;
+                        &lt;a href=&quot;javascript:void(0);&quot; onclick=&quot;indexMethod(&#39;online_deal&#39;)&quot;&gt;网上办理&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!--菜单end--&gt;
+    &lt;/div&gt;
+    &lt;!--&lt;div class=&quot;register_home&quot;&gt;--&gt;
+&lt;!--&lt;div class=&quot;form_top&quot;&gt;--&gt;
+    &lt;!--&lt;ul id=&quot;myTab&quot; class=&quot;nav-tabs&quot;&gt;--&gt;
+        &lt;!--&lt;li class=&quot;active&quot;&gt;--&gt;
+            &lt;!--&lt;a href=&quot;#unit&quot; onclick=&quot;register_unit&quot; data-toggle=&quot;tab&quot;&gt;单位账号注册 &lt;/a&gt;--&gt;
+        &lt;!--&lt;/li&gt;--&gt;
+        &lt;!--&lt;li&gt;--&gt;
+            &lt;!--&lt;a href=&quot;#personal&quot; onclick=&quot;register_personal;&quot; data-toggle=&quot;tab&quot;&gt;个人账号注册&lt;/a&gt;--&gt;
+        &lt;!--&lt;/li&gt;--&gt;
+        &lt;!--&lt;li style=&quot;float: right;&quot;&gt;已注册帐号？--&gt;
+            &lt;!--&lt;a class=&quot;click-login&quot; href=&quot;/xxgs/login&quot;&gt;请点击登录&lt;/a&gt;--&gt;
+        &lt;!--&lt;/li&gt;--&gt;
+    &lt;!--&lt;/ul&gt;--&gt;
+&lt;!--&lt;/div&gt;--&gt;
+&lt;!--&lt;div class=&quot;form_body&quot;&gt;--&gt;
+    &lt;!--&lt;div id=&quot;myTabContent&quot; class=&quot;tab-content&quot;&gt;--&gt;
+        &lt;!--&lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade active in&quot; id=&quot;unit&quot; aria-labelledby=&quot;unit&quot;&gt;--&gt;
+            &lt;!--unit--&gt;
+        &lt;!--&lt;/div&gt;--&gt;
+        &lt;!--&lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade &quot; id=&quot;personal&quot; aria-labelledby=&quot;personal&quot;&gt;--&gt;
+            &lt;!--personal--&gt;
+        &lt;!--&lt;/div&gt;--&gt;
+    &lt;!--&lt;/div&gt;--&gt;
+&lt;!--&lt;/div&gt;--&gt;</code></pre><!--</div>-->
+<!--</div>-->
+
+
+<ul id="myTab" class="nav nav-tabs">
+    <li class="">
+        <a href="#home" data-toggle="tab" aria-expanded="false">
+            菜鸟教程
+        </a>
+    </li>
+    <li class="active"><a href="#ios" data-toggle="tab" aria-expanded="true">iOS</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade" id="home">
+        <p>菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
+    </div>
+    <div class="tab-pane fade active in" id="ios">
+        <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+            TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+    </div>
+</div>
+
+
+<pre><code>    &lt;div class=&quot;foot&quot; id=&quot;xxgs_foot_message&quot;&gt;主办：厦门市行政服务中心版权所有 闽ICP备06004296号 地址：厦门市湖里区金山街道云顶北路842号 邮编：361000&lt;/div&gt;
+    &lt;!--右侧部分结束--&gt;
+
+&lt;/div&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src=&quot;/static/js/html5shiv.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/static/js/respond.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;!-- 全局js --&gt;
+&lt;script src=&quot;/static/js/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/static/js/bootstrap.min.js?v=3.3.6&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/static/js/plugins/metisMenu/jquery.metisMenu.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/static/js/plugins/slimscroll/jquery.slimscroll.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/static/js/plugins/layer/layer.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/static/js/common/aexit.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- 自定义js --&gt;
+&lt;script src=&quot;/static/js/hplus.js?v=4.1.0&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/static/js/contabs.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/static/module/cms/layout/cms_layout.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- 第三方插件 --&gt;
+&lt;script src=&quot;/static/js/plugins/pace/pace.min.js&quot;&gt;&lt;/script&gt;</code></pre><script>
+    $("#" +"</script></body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>[^注解1.2]: 当有多个onload方法时 只会执行最后一个onload方法;<br>[^注解1.4.1]: 有可能span标签的父级并不是div标签 例如 : <code>&lt;div&gt;&lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/div&gt;</code> ;<br>[^注解1.4.2]: <code>&lt;div&gt;&lt;/div&gt; &lt;span&gt;&lt;/span&gt;</code>;<br>[^注解1.4.3]: <code>&lt;input class=&quot;my-class&quot;/&gt;</code>;</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="chenzeshi.xzy" rel="external nofollow noreferrer">ChenZS</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="chenzeshi.xzy/2019/07/14/JQuery%E7%9A%84%E7%AE%80%E5%8D%95%E9%9A%8F%E8%AE%B0/">chenzeshi.xzy/2019/07/14/JQuery%E7%9A%84%E7%AE%80%E5%8D%95%E9%9A%8F%E8%AE%B0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="chenzeshi.xzy" target="_blank">ChenZS</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/JQuery/">
+                                    <span class="chip bg-color">JQuery</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%BF%AB%E9%80%9F%E6%93%8D%E4%BD%9CDOM/">
+                                    <span class="chip bg-color">快速操作DOM</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2019/11/11/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ChenZS
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Current&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/07/14/JQuery%E7%9A%84%E7%AE%80%E5%8D%95%E9%9A%8F%E8%AE%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="My awesome title">
+                        
+                        <span class="card-title">My awesome title</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+== 因不同markdown编辑器之间的格式存在差异,最好使用Typora打开 ==
+
+
+
+11.1  链式操作思想
+链式操作是指对一个对象中的函数进行操作后反悔的结果是这个对象,以便后续可以继续调用该对象的其他方法, 例如:
+
+//定义
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JQuery/" class="post-category">
+                                    JQuery
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JQuery/">
+                        <span class="chip bg-color">JQuery</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BF%AB%E9%80%9F%E6%93%8D%E4%BD%9CDOM/">
+                        <span class="chip bg-color">快速操作DOM</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="chenzeshi.xzy" target="_blank">ChenZS</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
